@@ -1,13 +1,14 @@
 'use client';
 
-import { useRouter } from "next/router"
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Header() {
-    // const router = useRouter();
+    const router = useRouter();
+    const pathname = usePathname()
 
     return (
         <div>
-            <button onClick={() => { }}>返回</button>
+            <button className="bg-blue-500" onClick={router.back}>Layout 返回 [{pathname}]</button>
         </div>
     )
 }
