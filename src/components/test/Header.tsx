@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <div>
-            <button className="bg-blue-500" onClick={router.back}>Layout 返回 [{pathname}]</button>
+            <button className="bg-blue-500" onClick={router.back}> 当前: [{pathname}]  返回</button>
         </div>
     )
 }
