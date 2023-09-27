@@ -1,6 +1,9 @@
 "use client"
+import Button from '@/components/common/Button';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { BiArrowFromLeft } from 'react-icons/bi';
+import { AiOutlinePlusSquare } from 'react-icons/ai';
 
 export default function Test() {
     const [id, setId] = useState(0);
@@ -12,7 +15,7 @@ export default function Test() {
     }
 
     useEffect(() => {
-        console.log(id);
+        setId(1);
         return () => {
             console.log('销毁');
         }
@@ -20,11 +23,14 @@ export default function Test() {
 
     return (
         <div>
-            <h1 id="id">Test页 : {id}</h1>
+            <h1 id="id">/Test/Page : {id}</h1>
 
-            <button className='bg-blue-100' onClick={add}>add</button> <br />
+            <Button icon={AiOutlinePlusSquare} onClick={add}>Id</Button>
 
-            <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> Id </Link>
+            <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> <Button icon={BiArrowFromLeft}>Id</Button> </Link>
+            <Link href={`/test/context`}><Button icon={BiArrowFromLeft}>context</Button></Link>
+            <Link href={`/test/reducer`}><Button icon={BiArrowFromLeft}>reducer</Button></Link>
+
         </div>
     );
 }

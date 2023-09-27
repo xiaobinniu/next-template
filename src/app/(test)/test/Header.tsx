@@ -1,6 +1,8 @@
 'use client';
 
+import Button from "@/components/common/Button";
 import { useRouter, usePathname } from "next/navigation";
+import { BiArrowBack } from 'react-icons/bi'
 
 export default function Header() {
     const router = useRouter();
@@ -8,7 +10,7 @@ export default function Header() {
 
     return (
         <div>
-            <button className="bg-blue-500" onClick={router.back}> 当前: [{pathname}]  返回</button>
+            <span className="bg-blue-500" onClick={router.back}> 当前: [{pathname}] <Button icon={BiArrowBack}>返回</Button></span>
         </div>
     )
 }
