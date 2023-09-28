@@ -3,6 +3,11 @@ export type State = {
     count: number
 }
 
+export enum TState {
+    token = "token",
+    count = "count"
+}
+
 export enum ActionType {
     UPDATE = 'update'
 }

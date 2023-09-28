@@ -30,6 +30,7 @@ export default function Test() {
             <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> <Button icon={BiArrowFromLeft}>Id</Button> </Link>
             <Link href={`/test/context`}><Button icon={BiArrowFromLeft}>context</Button></Link>
             <Link href={`/test/reducer`}><Button icon={BiArrowFromLeft}>reducer</Button></Link>
+            <Link href={`/test/zustand`}><Button icon={BiArrowFromLeft}>zustand</Button></Link>
 
         </div>
     );

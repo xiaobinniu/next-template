@@ -10,7 +10,7 @@ export default function Header() {
 
     return (
         <div>
-            <span className="bg-blue-500" onClick={router.back}> 当前: [{pathname}] <Button icon={BiArrowBack}>返回</Button></span>
+            <span className="bg-blue-500" onClick={router.back}> usePathname: [{pathname}] <Button icon={BiArrowBack}></Button></span>
         </div>
     )
 }
