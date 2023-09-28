@@ -1,5 +1,5 @@
 
-import { create } from 'zustand'
+import { GetState, SetState, StoreApi, create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 
 type Persist = {
@@ -17,7 +17,9 @@ export const usePersistStore = create(
         }),
         {
             name: 'my-storage',
-            storage: createJSONStorage(() => localStorage)
+            skipHydration: true,
         }
     )
 )
+
+
