@@ -1,6 +1,6 @@
 
-import { GetState, SetState, StoreApi, create } from 'zustand'
-import { createJSONStorage, persist } from 'zustand/middleware'
+import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
 
 type Persist = {
     bears: number

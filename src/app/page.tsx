@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <div>
+        <div className="w-full h-full">
             <strong>主页</strong>
             <br />
             <br />
             <ul>
-                <li>
+                <li className=" from-slate-50">
                     <Link href={`/test#id`}><Button icon={BiArrowFromLeft}>test</Button></Link>
                 </li>
             </ul>

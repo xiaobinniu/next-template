@@ -2,7 +2,7 @@
 
 import Button from "@/components/common/Button";
 import { useTestContext } from "@/context/TestContext";
-import { Action, ActionType, TState } from "@/reducer/TestReducer";
+import { ActionType, TState } from "@/reducer/TestReducer";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function Context() {
@@ -14,7 +14,7 @@ export default function Context() {
             type: ActionType.UPDATE,
             field: TState.count,
             value: count + 1
-        } as Action)
+        })
     }
 
     return (
