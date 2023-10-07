@@ -2,18 +2,18 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-type Persist = {
+type PersistData = {
     bears: number
-    addABear: () => void
+    addBear: () => void
 }
 
-type Get = () => Persist
+type Get = () => PersistData
 
 export const usePersistStore = create(
     persist(
         (set, get: Get) => ({
             bears: 0,
-            addABear: () => set({ bears: get().bears + 1 }),
+            addBear: () => set({ bears: get().bears + 1 }),
         }),
         {
             name: 'my-storage',

@@ -7,7 +7,7 @@ import { AiOutlinePlusSquare } from "react-icons/ai";
 import { useStore } from "zustand";
 
 export default function Persist() {
-    const { bears, addABear } = useStore(usePersistStore, (state) => ({ bears: state.bears, addABear: state.addABear }));
+    const { bears, addBear } = useStore(usePersistStore, (state) => ({ bears: state.bears, addBear: state.addBear }));
 
     useEffect(() => {
         usePersistStore.persist.rehydrate();
@@ -16,7 +16,7 @@ export default function Persist() {
     return (
         <>
             <div>bears: {bears}</div>
-            <Button icon={AiOutlinePlusSquare} onClick={addABear}>Increase</Button>
+            <Button icon={AiOutlinePlusSquare} onClick={addBear}>Increase</Button>
         </>
     )
 }
