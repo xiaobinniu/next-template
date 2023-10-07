@@ -16,6 +16,7 @@ export default function Test() {
     }
 
     useEffect(() => {
+        console.log('useEffect');
         setId(1);
         return () => {
             console.log('destory');
