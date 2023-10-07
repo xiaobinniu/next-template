@@ -25,6 +25,9 @@ export const initState: State = {
     count: 0
 }
 
+/**
+ * reducer 函数就是你放置状态逻辑的地方。它接受两个参数，分别为当前 state 和 action 对象，并且返回的是更新后的 state：
+ */
 export const reducer = (state: State, action: Action) => {
     switch (action.type) {
         case ActionType.UPDATE:
@@ -34,3 +37,4 @@ export const reducer = (state: State, action: Action) => {
             throw new Error(action.type)
     }
 }
+

@@ -12,6 +12,10 @@ Next.js 将等待内部数据获取generateMetadata完成，然后再将 UI 流�
 
 #  pages目录中的任何文件都被视为路径。(可能不安全)
 
+# zustand middleware persist
+
+# Hook 的名称必须永远以 use 开头
+
 # 待研究
   template
   route
@@ -21,5 +25,4 @@ Next.js 将等待内部数据获取generateMetadata完成，然后再将 UI 流�
 # 并行路由 @  + 拦截路由 + Modal
   并行路由存在, @test  page.tsx   当访问 下一级 目录 test/context 时候 刷新 404
 
-# zustand middleware
  
