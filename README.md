@@ -13,8 +13,7 @@ Next.js 将等待内部数据获取generateMetadata完成，然后再将 UI 流�
 #  pages目录中的任何文件都被视为路径。(可能不安全)
 
 # zustand middleware persist
-
-# Hook 的名称必须永远以 use 开头
+# usePathname, redirect from "next/navigation"  实现路由守卫
 
 # 待研究
   template

@@ -1,12 +1,19 @@
 "use client"
 
 import './globals.css';
-import { usePathname } from 'next/navigation';
+import { usePathname, redirect } from 'next/navigation';
 import AppContextProvider from '@/context/AppContext';
 import Header from './(test)/test/Header';
+import { useEffect } from 'react';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
+
+    useEffect(() => {
+        if (pathname === "/") {
+            // redirect('/test')
+        }
+    }, [pathname])
 
     return (
         <html lang="en">
