@@ -11,8 +11,10 @@ body {
 }
 
 .g-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @apply flex justify-center items-center;
+}
+
+.g-mask {
+    @apply w-screen h-screen fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center z-[1000] bg-black/75;
 }
 

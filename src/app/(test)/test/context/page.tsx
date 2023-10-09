@@ -1,7 +1,7 @@
 "use client"
 
-import Button from "@/components/common/Button";
-import { useAppContext } from "@/context/AppContext";
+import MyButton from "@/components/common/MyButton";
+import { useAppContext } from "@/context/test/AppContext";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function Context() {
@@ -17,7 +17,7 @@ export default function Context() {
     return (
         <div>
             <div>count: {state.count}</div>
-            <Button icon={AiOutlinePlusSquare} onClick={add}>count++</Button>
+            <MyButton icon={AiOutlinePlusSquare} onClick={add}>count++</MyButton>
         </div>
     );
 }

@@ -2,26 +2,29 @@
 
 import './globals.css';
 import { usePathname, redirect } from 'next/navigation';
-import AppContextProvider from '@/context/AppContext';
-import Header from './(test)/test/Header';
+// import AppContextProvider from '@/context/test/AppContext';
 import { useEffect } from 'react';
+import useAuth from '@/hook/useAuth';
+import StyledComponentsRegistry from '@/lib/AntdRegistry';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
+    const isAuth = useAuth();
 
     useEffect(() => {
-        if (pathname === "/") {
-            // redirect('/test')
+        if (!isAuth && pathname !== "/") {
+            console.log("登录弹窗");
+            redirect('/');
         }
-    }, [pathname])
+    }, [pathname]);
 
     return (
         <html lang="en">
-            <body className=' w-screen min-h-screen overflow-x-hidden overflow-y-auto bg-[#f7f8fa]'>
-                <title>App Home</title>
-                <meta name='description' content="这是描述" />
-                {pathname === "/" ? null : <Header ></Header>}
-                <AppContextProvider>{children}</AppContextProvider>
+            <body className='w-screen h-screen overflow-auto bg-bg'>
+                <title>This is Title</title>
+                <meta name='description' content="This is a description" />
+                {/* <AppContextProvider>{children}</AppContextProvider> */}
+                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
             </body>
         </html>
     )

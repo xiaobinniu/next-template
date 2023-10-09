@@ -1,5 +1,5 @@
 "use client"
-import Button from '@/components/common/Button';
+import MyButton from '@/components/common/MyButton';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { BiArrowFromLeft } from 'react-icons/bi';
@@ -31,12 +31,12 @@ export default function Test() {
         <div>
             <h1 id="id">/Test/Page : {id}</h1>
 
-            <Button icon={AiOutlinePlusSquare} onClick={add}>Id</Button>
+            <MyButton icon={AiOutlinePlusSquare} onClick={add}>Id</MyButton>
 
-            <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> <Button icon={BiArrowFromLeft}>Id</Button> </Link>
-            <Link href={`/test/context`}><Button icon={BiArrowFromLeft}>context</Button></Link>
-            <Link href={`/test/reducer`}><Button icon={BiArrowFromLeft}>reducer</Button></Link>
-            <Link href={`/test/zustand`}><Button icon={BiArrowFromLeft}>zustand</Button></Link>
+            <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> <MyButton icon={BiArrowFromLeft}>Id</MyButton> </Link>
+            <Link href={`/test/context`}><MyButton icon={BiArrowFromLeft}>context</MyButton></Link>
+            <Link href={`/test/reducer`}><MyButton icon={BiArrowFromLeft}>reducer</MyButton></Link>
+            <Link href={`/test/zustand`}><MyButton icon={BiArrowFromLeft}>zustand</MyButton></Link>
 
             <h1>子组件传值：</h1>
             <Child id={id} change={handleChange} />
