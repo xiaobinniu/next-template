@@ -12,7 +12,7 @@ export default function Context() {
     const add = () => {
         dispatch({
             type: ActionType.UPDATE,
-            field: TState.count,
+            field: "count",
             value: count + 1
         })
     }

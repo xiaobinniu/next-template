@@ -11,7 +11,7 @@ export enum ActionType {
 
 export type UpdateAction = {
     type: ActionType.UPDATE
-    field: string
+    field: TState
     value: any
 }
 
