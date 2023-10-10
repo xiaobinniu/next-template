@@ -9,16 +9,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     return (
         <html lang="en">
-            <body className='h-screen overflow-auto bg-bg relative'>
+            <body className='h-screen bg-bg relative'>
                 <title>This is Title</title>
                 <meta name='description' content="This is a description" />
                 <AppContextProvider>
                     <StyledComponentsRegistry>
-                        <Header></Header>
-                        <Aside></Aside>
-                        <center className={`w-full ${styles.center} pl-[275px] pt-[75px]`}>
-                            {children}
-                        </center>
+                        <div className='w-full h-full flex'>
+                            <Aside></Aside>
+                            <center className={`flex-1 flex flex-col`}>
+                                <Header></Header>
+                                <div className='flex-1'>{children}</div>
+                            </center>
+                        </div>
                     </StyledComponentsRegistry>
                 </AppContextProvider>
             </body>
