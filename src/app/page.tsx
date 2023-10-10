@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import styles from '../components/layout/layout.module.css'
+import styles from './layout.module.css'
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {

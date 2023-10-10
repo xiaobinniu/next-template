@@ -1,6 +1,6 @@
-import useSystemStore from "./useSystemStore";
+import useAppStore from "./useAppStore";
 
 export default function useAuth() {
-    const { token } = useSystemStore();
+    const { token } = useAppStore();
     return token !== ""
 }
