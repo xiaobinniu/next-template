@@ -1,7 +1,7 @@
 "use client"
 
-import Button from "@/components/common/Button";
-import { usePersistStore } from "@/store/persistStore";
+import MyButton from "@/components/common/MyButton";
+import { usePersistStore } from "@/store/test/persistStore";
 import { useEffect } from "react";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import { useStore } from "zustand";
@@ -16,7 +16,7 @@ export default function Persist() {
     return (
         <>
             <div>bears: {bears}</div>
-            <Button icon={AiOutlinePlusSquare} onClick={addBear}>Increase</Button>
+            <MyButton icon={AiOutlinePlusSquare} onClick={addBear}>Increase</MyButton>
         </>
     )
 }

@@ -1,7 +1,7 @@
 "use client"
 
-import Button from "@/components/common/Button";
-import { useBearStore } from "@/store/zustandStore"
+import MyButton from "@/components/common/MyButton";
+import { useBearStore } from "@/store/test/zustandStore"
 import Link from "next/link";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import { BiArrowFromLeft } from "react-icons/bi";
@@ -19,11 +19,11 @@ export default function Zustand() {
     return (
         <>
             <div>bears: {bears}</div>
-            <Button icon={AiOutlinePlusSquare} onClick={() => increasePopulation(2)}>Increase</Button>
-            <Button icon={AiOutlinePlusSquare} onClick={removeAllBears}>Clear</Button>
-            <Button icon={AiOutlinePlusSquare} onClick={clear}>ClearAsync</Button>
+            <MyButton icon={AiOutlinePlusSquare} onClick={() => increasePopulation(2)}>Increase</MyButton>
+            <MyButton icon={AiOutlinePlusSquare} onClick={removeAllBears}>Clear</MyButton>
+            <MyButton icon={AiOutlinePlusSquare} onClick={clear}>ClearAsync</MyButton>
 
-            <Link href={`/test/zustand/persist`}><Button icon={BiArrowFromLeft}>persist</Button></Link>
+            <Link href={`/test/zustand/persist`}><MyButton icon={BiArrowFromLeft}>persist</MyButton></Link>
 
         </>
     )

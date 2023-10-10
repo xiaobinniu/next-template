@@ -1,14 +1,15 @@
 import { ComponentPropsWithoutRef } from "react";
 import { IconType } from "react-icons";
+import styles from './common.module.css'
 
 type ButtonProps = {
     icon?: IconType
 } & ComponentPropsWithoutRef<'button'>
 
-export default function Button({ children, className = "", icon: Icon, ...props }: ButtonProps) {
+export default function MyButton({ children, className = "", icon: Icon, ...props }: ButtonProps) {
     return (
         <button
-            className={`g-center border border-gray-600 rounded px-3 py-1 hover:bg-gray-300 active:bg-gray-400 ${className}`}
+            className={`g-cente px-3 py-1  ${className} ${styles.button}`}
             {...props}
         >
             {Icon && <Icon className={`text-lg ${children ? "mr-1" : ""}`} />}
