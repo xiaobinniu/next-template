@@ -1,30 +1,25 @@
-"use client"
-
+import Header from '@/components/layout/Header';
 import './globals.css';
-import { usePathname, redirect } from 'next/navigation';
 // import AppContextProvider from '@/context/test/AppContext';
-import { useEffect } from 'react';
-import useAuth from '@/hook/useAuth';
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
+import Aside from '@/components/layout/Aside';
+import styles from '../components/layout/layout.module.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    const pathname = usePathname();
-    const isAuth = useAuth();
-
-    useEffect(() => {
-        if (!isAuth && pathname !== "/") {
-            console.log("登录弹窗");
-            redirect('/');
-        }
-    }, [pathname]);
 
     return (
         <html lang="en">
-            <body className='w-screen h-screen overflow-auto bg-bg'>
+            <body className='h-screen overflow-auto bg-bg relative'>
                 <title>This is Title</title>
                 <meta name='description' content="This is a description" />
                 {/* <AppContextProvider>{children}</AppContextProvider> */}
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+                <StyledComponentsRegistry>
+                    <Header></Header>
+                    <Aside></Aside>
+                    <center className={`w-full ${styles.center} pl-[275px] pt-[75px]`}>
+                        {children}
+                    </center>
+                </StyledComponentsRegistry>
             </body>
         </html>
     )

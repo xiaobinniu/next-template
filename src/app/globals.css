@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-
+:root{
+    --scrollbarwidth : 5px;
 }
 
 body {
-  
+  width: calc(100vw - var(--scrollbarwidth));
+  @apply text-font1 text-[16px];
+}
+
+button {
+    cursor: pointer;
 }
 
 .g-center {
@@ -17,4 +22,14 @@ body {
 .g-mask {
     @apply w-screen h-screen fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center z-[1000] bg-black/75;
 }
+
+::-webkit-scrollbar {
+    width:  var(--scrollbarwidth);
+    background-color: #1b0e3a;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #7f55de;
+    border-radius: 5px;
+}
+
 
