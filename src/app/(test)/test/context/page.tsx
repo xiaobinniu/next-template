@@ -1,12 +1,12 @@
 "use client"
 
 import MyButton from "@/components/common/MyButton";
-import { useAppContext } from "@/context/test/AppContext";
+import { useReducerContext } from "@/context/test/ReducerContext";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function Context() {
 
-    const { state, setState } = useAppContext();
+    const { state, setState } = useReducerContext();
 
     const add = () => {
         setState((v) => {

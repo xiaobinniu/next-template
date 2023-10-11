@@ -2,7 +2,7 @@
 
 import MyButton from "@/components/common/MyButton";
 import { useTestContext } from "@/context/test/TestContext";
-import { ActionType, TState } from "@/reducer/TestReducer";
+import { ActionType, TState } from "@/reducer/test/TestReducer";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
 export default function Context() {

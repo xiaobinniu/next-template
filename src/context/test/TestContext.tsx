@@ -1,6 +1,6 @@
 "use client";
 
-import { Action, State, initState, reducer } from '@/reducer/TestReducer';
+import { Action, State, initState, reducer } from '@/reducer/test/TestReducer';
 import { Dispatch, ReactNode, createContext, useContext, useMemo, useReducer } from 'react';
 
 type TestContentProps = {

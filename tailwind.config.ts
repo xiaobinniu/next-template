@@ -15,6 +15,7 @@ const config: Config = {
                 font1: "#a08bf9", // 深
                 font2: "#cbb5ff", // 浅
                 white: "#d2ccdc", // 白
+                border: "#8f51fb"
             },
             backgroundColor: {
                 bg: "#1c0e3c",

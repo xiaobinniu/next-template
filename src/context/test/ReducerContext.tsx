@@ -14,7 +14,7 @@ type AppContentProps = {
 
 const AppContext = createContext<AppContentProps>(null!)
 
-export const useAppContext = () => {
+export const useReducerContext = () => {
     return useContext(AppContext)
 }
 
