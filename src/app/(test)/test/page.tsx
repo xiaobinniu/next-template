@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { BiArrowFromLeft } from 'react-icons/bi';
 import { AiOutlinePlusSquare } from 'react-icons/ai';
 import Child from './Child';
-import ReducerContextProvider from '@/context/test/ReducerContext';
 
 export default function Test() {
     const [id, setId] = useState(0);
@@ -29,21 +28,19 @@ export default function Test() {
     }
 
     return (
-        <ReducerContextProvider>
-            <div>
-                <h1 id="id">/Test/Page : {id}</h1>
+        <div>
+            <h1 id="id">/Test/Page : {id}</h1>
 
-                <MyButton icon={AiOutlinePlusSquare} onClick={add}>Id</MyButton>
+            <MyButton icon={AiOutlinePlusSquare} onClick={add}>Id</MyButton>
 
-                <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> <MyButton icon={BiArrowFromLeft}>Id</MyButton> </Link>
-                <Link href={`/test/context`}><MyButton icon={BiArrowFromLeft}>context</MyButton></Link>
-                <Link href={`/test/reducer`}><MyButton icon={BiArrowFromLeft}>reducer</MyButton></Link>
-                <Link href={`/test/zustand`}><MyButton icon={BiArrowFromLeft}>zustand</MyButton></Link>
+            <Link href={`/test/${id.toString()}`} className=' bg-slate-400'> <MyButton icon={BiArrowFromLeft}>Id</MyButton> </Link>
+            <Link href={`/test/context`}><MyButton icon={BiArrowFromLeft}>context</MyButton></Link>
+            <Link href={`/test/reducer`}><MyButton icon={BiArrowFromLeft}>reducer</MyButton></Link>
+            <Link href={`/test/zustand`}><MyButton icon={BiArrowFromLeft}>zustand</MyButton></Link>
 
-                <h1>子组件传值：</h1>
-                <Child id={id} change={handleChange} />
-            </div>
-        </ReducerContextProvider>
+            <h1>子组件传值：</h1>
+            <Child id={id} change={handleChange} />
+        </div>
     );
 }
 

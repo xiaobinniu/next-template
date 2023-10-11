@@ -1,3 +1,4 @@
+import ReducerContextProvider from '@/context/test/ReducerContext'
 import TestContextProvider from '@/context/test/TestContext'
 import { Metadata } from 'next'
 
@@ -13,7 +14,11 @@ export default function TestLayout({ children, parallel2, parallel1 }:
             {/* {parallel1}
             {parallel2} */}
 
-            <TestContextProvider>{children}</TestContextProvider>
+            <ReducerContextProvider>
+                <TestContextProvider>
+                    {children}
+                </TestContextProvider>
+            </ReducerContextProvider>
         </div>
     )
 }
