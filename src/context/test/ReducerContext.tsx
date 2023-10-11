@@ -18,7 +18,7 @@ export const useReducerContext = () => {
     return useContext(AppContext)
 }
 
-export default function AppContextProvider({ children }: { children: ReactNode }) {
+export default function ReducerContextProvider({ children }: { children: ReactNode }) {
     const [state, setState] = useState({ token: "", count: 0 });
 
     const contextValue = useMemo(() => {  // state, setState 不变,  children 子组件就不会重新渲染
