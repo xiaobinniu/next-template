@@ -11,7 +11,7 @@ export default function Aside() {
 
     return (
         <>
-            <aside className={`fixed left-0 top-0 md:relative w-[275px] h-screen bg-header ${state.asideShow ? "translate-x-0" : "translate-x-[-100%] md:translate-x-0"} transition-transform md:transition-none`}>
+            <aside className={`flex-shrink-0 fixed left-0 top-0 md:relative w-[275px] h-screen bg-header ${state.asideShow ? "translate-x-0" : "translate-x-[-100%] md:translate-x-0"} transition-transform md:transition-none`}>
                 <Image src={asidebg} alt='asidebg' className='absolute top-[50px]' />
                 {state.device === "mobile" ? <MyClose onClose={() => dispatch({
                     type: ActionType.UPDATE,

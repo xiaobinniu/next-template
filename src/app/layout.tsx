@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <StyledComponentsRegistry>
                         <div className='w-full h-full flex'>
                             <Aside></Aside>
-                            <center className={`flex-1 flex flex-col`}>
+                            <center className={`flex-1 flex flex-col md:min-w-[925px] md:overflow-x-auto`}>
                                 <Header></Header>
                                 <div className='flex-1 overflow-y-auto'>{children}</div>
                             </center>

@@ -8,7 +8,7 @@
 
 body {
   /* width: calc(100vw - var(--scrollbarwidth)); */
-  @apply text-font1 text-[16px] w-screen;
+  @apply text-font1 text-[16px] w-screen overflow-x-hidden md:overflow-x-auto;
 }
 
 button {
