@@ -4,7 +4,6 @@ import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import Aside from '@/components/layout/Aside';
 import AppContextProvider from '@/context/AppContext';
 import Adapt from '@/components/common/Adapt';
-import ReducerContextProvider from '@/context/test/ReducerContext';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -12,20 +11,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className='h-screen bg-bg relative'>
                 <title>This is Title</title>
                 <meta name='description' content="This is a description" />
-                <ReducerContextProvider>
-                    <AppContextProvider>
-                        <Adapt></Adapt>
-                        <StyledComponentsRegistry>
-                            <div className='w-full h-full flex'>
-                                <Aside></Aside>
-                                <center className={`flex-1 flex flex-col`}>
-                                    <Header></Header>
-                                    <div className='flex-1 overflow-y-auto'>{children}</div>
-                                </center>
-                            </div>
-                        </StyledComponentsRegistry>
-                    </AppContextProvider>
-                </ReducerContextProvider>
+                <AppContextProvider>
+                    <Adapt></Adapt>
+                    <StyledComponentsRegistry>
+                        <div className='w-full h-full flex'>
+                            <Aside></Aside>
+                            <center className={`flex-1 flex flex-col`}>
+                                <Header></Header>
+                                <div className='flex-1 overflow-y-auto'>{children}</div>
+                            </center>
+                        </div>
+                    </StyledComponentsRegistry>
+                </AppContextProvider>
             </body>
         </html>
     )
