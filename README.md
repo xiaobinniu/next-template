@@ -20,11 +20,11 @@ Next.js 将等待内部数据获取generateMetadata完成，然后再将 UI 流�
   route
   middleware (不同于nuxt的路由中间件)
 
+  output:"export" <Image /> 不能正常使用
+
 
 # 并行路由 @  + 拦截路由 + Modal
   并行路由存在, @test  page.tsx   当访问 下一级 目录 test/context 时候 刷新 404
 
 
-
-next-template-49t3.vercel.app
  
