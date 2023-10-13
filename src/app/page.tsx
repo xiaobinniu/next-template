@@ -20,7 +20,7 @@ export default async function Home({ }) {
         smsCode: ""
     }
 
-    const { data: Data } = await fetch("http://192.168.0.27:8088/v1/account/login", {
+    const { data: Data } = await fetch("https://ass.arkfungames.com/v1/account/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -29,7 +29,7 @@ export default async function Home({ }) {
     }).then(response => response.json())
 
     // useEffect(() => {
-    //     fetch("http://192.168.0.27:8088/v1/account/login", {
+    //     fetch("https://ass.arkfungames.com/v1/account/login", {
     //         method: "POST",
     //         headers: {
     //             "Content-Type": "application/json"
