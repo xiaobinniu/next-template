@@ -1,13 +1,45 @@
+// "use client"
 import { Metadata } from 'next';
 import styles from './layout.module.css'
 import Footer from '@/components/layout/Footer';
+import { useEffect, useState } from 'react';
+import { ReadStream } from 'fs';
 
 export const metadata: Metadata = {
     title: '主页',
     description: '主页',
 }
 
-export default function Home() {
+export default async function Home({ }) {
+
+    // const [token, setToken] = useState("")
+
+    const data = {
+        address: "newxiaobin@gmail.com",
+        password: "123456",
+        smsCode: ""
+    }
+
+    const { data: Data } = await fetch("http://192.168.0.27:8088/v1/account/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }).then(response => response.json())
+
+    // useEffect(() => {
+    //     fetch("http://192.168.0.27:8088/v1/account/login", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(data)
+    //     }).then(response => response.json()).then((data) => {
+    //         console.log(data.data.token);
+    //         setToken(data.data.token)
+    //     })
+    // }, [])
 
     return (
         <div className="w-full relative">
@@ -15,8 +47,10 @@ export default function Home() {
                 <source src="https://xb-web.s3.sa-east-1.amazonaws.com/video/calica777slots_video.mp4" type="video/mp4" />
             </video>
 
-            <div className='h-[3000px]'></div>
+            <div className='h-[3000px]'>{Data.token}</div>
             <Footer></Footer>
         </div>
     )
 }
+
+
