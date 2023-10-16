@@ -40,6 +40,9 @@ export default function Test() {
 
             <h1>子组件传值：</h1>
             <Child id={id} change={handleChange} />
+            <h1>拖拽</h1>
+            <Link href={`/test/dnd`}><MyButton icon={BiArrowFromLeft}>Dnd</MyButton></Link>
+
         </div>
     );
 }
