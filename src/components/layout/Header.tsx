@@ -10,7 +10,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="w-full h-[75px] bg-header">
+            <header className="w-full h-[75px] bg-header pt-[40px]">
                 {state.device === "mobile" ? <Image src={menu} alt="menu" width={30} onClick={() => dispatch({
                     type: ActionType.UPDATE,
                     field: "asideShow",

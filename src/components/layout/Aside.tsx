@@ -5,9 +5,17 @@ import asidebg from '@/assets/img/layout/asidebg.png'
 import { useAppContext } from '@/context/AppContext';
 import MyClose from '../common/MyClose';
 import { ActionType } from '@/reducer/AppReducer';
+import { useEffect } from 'react';
 
 export default function Aside() {
     const { state, dispatch } = useAppContext();
+
+    useEffect(() => {
+        window.parent.postMessage({ data: 'Hello from Web!' }, '*');
+        return () => {
+
+        }
+    }, []);
 
     return (
         <>
